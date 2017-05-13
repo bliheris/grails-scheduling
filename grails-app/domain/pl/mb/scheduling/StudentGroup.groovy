@@ -6,6 +6,12 @@ class StudentGroup {
 
     static belongsTo = [majorSemester: MajorSemester]
 
+    static hasMany = [schedule: ScheduleEntry]
+
+    String toString() {
+        "${majorSemester.major.name} sem. ${majorSemester.semester} - grupa ${number}"
+    }
+
     static constraints = {
     }
 }

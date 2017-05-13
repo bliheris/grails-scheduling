@@ -6,6 +6,8 @@ class MajorSemester {
 
     static belongsTo = [major: Major]
 
+    static hasMany = [courses: Course]
+
     String toString() {
         "${major} semester ${semester}"
     }
